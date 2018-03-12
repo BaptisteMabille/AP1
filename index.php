@@ -1,9 +1,4 @@
 <?php
+include "./include/header.php";
+include "./include/footer.php";
 
-//Commentaire
-/*
- * Commentaire
- */
-$toto = "Ceci est une chaine";
-
-echo $toto;
