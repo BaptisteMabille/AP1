@@ -8,24 +8,21 @@
 <body>
 <div id="container">
 
+    <?php
+    include "./include/header.php";
 
+    $page = $_GET['page'] ?? "";
+    $page = "./include/" . $page . ".inc.php";
 
+    $files = glob("./include/*.inc.php");
 
-<?php
-include "./include/header.php";
+    if(in_array($page, $files))
+        include $page;
+    else
+        include "./include/home.inc.php";
 
-$page = $_GET['page'] ?? "";
-$page = "./include/" . $page . ".inc.php";
-
-$files = glob("./include/*.inc.php");
-
-if(in_array($page, $files))
-    include $page;
-else
-    include "./include/home.inc.php";
-
-include "./include/footer.php";
-?>
+    include "./include/footer.php";
+    ?>
 </div>
 </body>
 </html>
