@@ -1,4 +1,5 @@
 <?php
+ini_set('smtp port', 1025);
 include "./functions/classAutoLoader.php";
 spl_autoload_register("classAutoLoader");
 ?>
@@ -8,7 +9,7 @@ spl_autoload_register("classAutoLoader");
 <html lang="fr-FR">
 <head>
     <meta charset="utf-8"/>
-    <title>CESI AP - Blog/e-commerce</title>
+    <title>CESI AP - Blog</title>
     <link rel="stylesheet" href="assets/css/style.css"
 </head>
 <body>

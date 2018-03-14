@@ -2,7 +2,7 @@
 class Queries
 {
     // DSN / Data Source Name
-    private $dsn = "mysql:dbname=ap;host=localhost;charset=utf-8";
+    private $dsn = "mysql:dbname=ap;host=localhost;charset=utf8";
     private $user = "ap";
     private $password = "ap";
     private $db;
