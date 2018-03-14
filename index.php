@@ -20,6 +20,7 @@ spl_autoload_register('classAutoLoader');
     CallPage::display();
     include "./include/footer.php";
     ?>
+
 </div>
 </body>
 </html>

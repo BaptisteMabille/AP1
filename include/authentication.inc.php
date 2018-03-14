@@ -21,6 +21,7 @@ if (isset($_POST['frmAuthentication'])) {
         $sql = "SELECT * FROM t_users WHERE usemail='$mail' AND usepassword='$password'";
         $query = new Queries();
         $resultat = $query -> select($sql) -> fetch();
+        $_SESSION['login'] = true;
         $_SESSION['prenom'] = $resultat -> useprenom;
         echo 'Bienvenue ' . $_SESSION['prenom'] . ' ! ';
     }
