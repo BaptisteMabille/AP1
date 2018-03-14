@@ -28,14 +28,16 @@ if (isset($_POST['frmRegistration'])) {
         $sql = "INSERT INTO t_users
                 (usenom, useprenom, usemail, usepassword, usetoken, id_groupes)
                 VALUES ('$name', '$firstName', '$mail', '$password', '$token', 3)";
+
         $rec -> insert($sql);
+
         $message = "<h1>Wunderbar !!!</h1>";
         $message .= "<p>Vous êtes inscrit !!!</p>";
         $message .= "<p>Merci de cliquer sur le lien pour valider</p>";
-        $message .= "<p><a href='http://localhost/CESI/AP1/index.php?";
+        $message .= "<p><a href='http://localhost/CESI/AP/index.php?";
         $message .= "page=validationInscription&amp;token=";
         $message .= $token;
-        $message .= "' target='_blank'>Lien</a>";
+        $message .= "' target='_blank'>Lien</a></p>";
         mail($mail, 'Confirmation compte', $message);
         echo "<p>Ich bin dans la base</p>";
     }

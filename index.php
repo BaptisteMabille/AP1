@@ -1,5 +1,6 @@
 <?php
 ini_set('smtp_port', 1025);
+date_default_timezone_set('Europe/Paris');
 include "./functions/classAutoLoader.php";
 spl_autoload_register('classAutoLoader');
 ?>
@@ -7,22 +8,16 @@ spl_autoload_register('classAutoLoader');
 <html lang="fr-FR">
 <head>
     <meta charset="utf-8" />
-    <title>CESI AP - Blog/e-commerce</title>
+    <title>CESI AP - Blog</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
 <div id="container">
 
     <?php
-    include "./includes/header.php";
-    $page = $_GET['page'] ?? "";
-    $page = "./includes/" . $page . ".inc.php";
-    $files = glob("./includes/*.inc.php");
-    if (in_array($page, $files))
-        include $page;
-    else
-        include "./includes/home.inc.php";
-    include "./includes/footer.php";
+    include "./include/header.php";
+    CallPage::display();
+    include "./include/footer.php";
     ?>
 </div>
 </body>
