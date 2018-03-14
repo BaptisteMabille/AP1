@@ -39,7 +39,7 @@ if (isset($_POST['frmRegistration'])) {
         $message .= $token;
         $message .= "' target='_blank'>Lien</a></p>";
         mail($mail, 'Confirmation compte', $message);
-        echo "<p>Ich bin dans la base</p>";
+        echo "<p>Contact Enregistré</p>";
     }
 }
 else {
