@@ -23,6 +23,11 @@ class Queries
         return $this -> db -> exec($sql);
     }
 
+    function select($sql)
+    {
+        return $this -> db -> query($sql);
+    }
+
     function __destruct()
     {
         unset($this -> db);
