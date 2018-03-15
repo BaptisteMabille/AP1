@@ -24,7 +24,7 @@ if (isset($_POST['frmAuthentication'])) {
         $_SESSION['login'] = true;
         $_SESSION['prenom'] = $resultat -> useprenom;
         echo 'Bienvenue ' . $_SESSION['prenom'] . ' ! ';
-        echo "<script>window.location.replace('http://localhost/CESI/AP/include/frmArticle.php')</script>";
+        echo "<script>window.location.replace('http://localhost/CESI/AP/index.php?page=article')</script>";
     }
 }
 else {

@@ -3,8 +3,9 @@
 if (isset($_POST['frmArticle'])) {
     $titre = $_POST['titre'] ?? "";
     $chapo = $_POST['chapo'] ?? "";
-    $contenu = $_POST['article'] ?? "";
+    $contenu = $_POST['contenu'] ?? "";
     $erreurs = array();
+
     if ($titre == "") array_push($erreurs, "Veuillez saisir un titre");
     if ($chapo == "") array_push($erreurs, "Veuillez saisir un chapo");
     if ($contenu == "") array_push($erreurs, "Veuillez saisir un article");
@@ -23,8 +24,8 @@ if (isset($_POST['frmArticle'])) {
         $sql = "INSERT INTO t_articles
                 (arttitre, artchapo, artcontenu)
                 VALUES ('$titre', '$chapo', '$contenu')";
-        die($sql);
         $rec -> insert($sql);
+        echo "<script>window.location.replace('http://localhost/CESI/AP/index.php?page=home')</script>";
     }
 }
 else {

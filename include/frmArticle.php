@@ -1,4 +1,4 @@
-<h1>Nouvel article</h1>
+
 <form action="#" method="post">
     <div>
         <label for="titre">Titre : </label>
@@ -10,7 +10,7 @@
     </div>
     <div>
         <label for="article">Votre article : </label>
-        <input type="text" id="contenu" name="contenu" value="<?php if(isset($contenu)) echo $contenu;?>"/>
+        <textarea id="contenu" name="contenu" value="<?php if(isset($contenu)) echo $contenu;?>"></textarea>
     </div>
     <div>
         <input type="reset" value="Effacer" />
